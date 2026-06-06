@@ -1,0 +1,545 @@
+body {
+  color: #2b2b2b;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.35s ease;
+}
+
+body:not(.siap) {
+  opacity: 0.97;
+}
+
+body.siap {
+  opacity: 1;
+}
+
+@keyframes naik {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-header > * {
+  animation: naik 0.55s ease-out both;
+}
+
+.anim-header > *:nth-child(1) { animation-delay: 0s; }
+.anim-header > *:nth-child(2) { animation-delay: 0.1s; }
+.anim-header > *:nth-child(3) { animation-delay: 0.18s; }
+.anim-header > *:nth-child(4) { animation-delay: 0.24s; }
+
+.masuk {
+  animation: naik 0.6s ease-out 0.12s both;
+}
+
+.kartu,
+.keahlian,
+.formbox,
+.langkah,
+.langkahbiru,
+.ajakan {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.kartu:hover,
+.keahlian:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.formbox:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.langkah:hover,
+.langkahbiru:hover {
+  transform: translateY(-2px);
+}
+
+.hubungi,
+.utama,
+.putih {
+  transition: background-color 0.2s ease, transform 0.18s ease;
+}
+
+.hubungi:hover,
+.utama:hover {
+  transform: translateY(-1px);
+}
+
+.putih:hover {
+  transform: translateY(-1px);
+}
+
+.dummy,
+.dummy2,
+.dummy3,
+.dummy4,
+.dummy5 {
+  transition: background-color 0.25s ease;
+}
+
+.dummy:hover,
+.dummy2:hover,
+.dummy3:hover,
+.dummy4:hover,
+.dummy5:hover {
+  background: #dcdcdc;
+}
+
+.dummy i,
+.dummy2 i,
+.dummy3 i,
+.dummy4 i,
+.dummy5 i {
+  opacity: 0.45;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dummy:hover i,
+.dummy2:hover i,
+.dummy3:hover i,
+.dummy4:hover i,
+.dummy5:hover i {
+  opacity: 0.75;
+  transform: scale(1.05);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a {
+  color: #0056d2;
+}
+
+.navsite {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.navsite .navbar-brand {
+  color: #111;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navsite .nav-link {
+  color: #333;
+  font-size: 0.95rem;
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+}
+
+.navsite .nav-link:hover {
+  color: #0056d2;
+}
+
+.navsite .nav-link.active {
+  color: #111;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #0056d2;
+}
+
+.hubungi {
+  background: #0056d2;
+  color: #fff !important;
+  border: none;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hubungi:hover {
+  background: #0044a8;
+  color: #fff !important;
+}
+
+.utama {
+  background: #0056d2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.utama:hover {
+  background: #0044a8;
+  color: #fff;
+}
+
+.btn.utama {
+  border: none;
+  color: #fff;
+}
+
+.putih {
+  background: #fff;
+  color: #111;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: #0056d2;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.hero {
+  font-size: clamp(1.6rem, 4vw, 2.35rem);
+  font-weight: bold;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.aksen {
+  color: #0056d2;
+  font-style: italic;
+}
+
+.abu {
+  color: #5a5a5a;
+  max-width: 36rem;
+}
+
+.atas {
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
+
+.isi {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.seksi {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 1.25rem;
+}
+
+.dummy {
+  background: #e8e8e8;
+  border-radius: 6px;
+  min-height: 180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dummy2 {
+  background: #e8e8e8;
+  border-radius: 6px;
+  min-height: 220px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dummy3 {
+  background: #e8e8e8;
+  border-radius: 6px;
+  min-height: 280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dummy4 {
+  background: #e8e8e8;
+  border-radius: 6px;
+  min-height: 160px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dummy5 {
+  background: #e8e8e8;
+  border-radius: 6px;
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blok {
+  margin-bottom: 2rem;
+}
+
+.item-proyek {
+  margin-bottom: 0;
+}
+
+.tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: #0056d2;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.nama {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.35rem;
+}
+
+.kartu {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.25rem;
+  height: 100%;
+  background: #fafafa;
+}
+
+.kartu h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.ikon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #d6e8ff;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  color: #0056d2;
+  font-size: 1.2rem;
+}
+
+.cek {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 0.88rem;
+  color: #444;
+}
+
+.cek li {
+  padding-left: 1.1rem;
+  position: relative;
+  margin-bottom: 0.35rem;
+}
+
+.cek li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0056d2;
+  font-size: 0.85rem;
+}
+
+.langkah {
+  padding: 1.25rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  min-height: 100px;
+  background: #f0f0f0;
+}
+
+.langkahbiru {
+  padding: 1.25rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  min-height: 100px;
+  background: #0056d2;
+  color: #fff;
+}
+
+.langkahbiru .angka {
+  opacity: 0.9;
+}
+
+.angka {
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+}
+
+.gelap {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  animation: naik 0.65s ease-out both;
+}
+
+.gelap h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.gelap p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.ajakan {
+  background: #f3f3f3;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.foto {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  display: block;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.bingkai-gambar {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #e8e8e8;
+}
+
+.bingkai-gambar img {
+  transition: transform 0.35s ease;
+}
+
+.bingkai-gambar:hover img {
+  transform: scale(1.03);
+}
+
+blockquote.kutip {
+  border: none;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.15rem;
+  color: #333;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote.kutip i {
+  opacity: 0.35;
+}
+
+.keahlian {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1.25rem;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.keahlian h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 0.65rem;
+  color: #888;
+  letter-spacing: 0.06em;
+}
+
+.formulir label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+}
+
+.formulir .form-control {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.formbox {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.kaki {
+  background: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: auto;
+}
+
+.kaki a {
+  color: #444;
+  text-decoration: none;
+}
+
+.kaki a:hover {
+  color: #0056d2;
+  text-decoration: underline;
+}
+
+.halaman {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: bold;
+  color: #111;
+}
+
+.miring {
+  font-style: italic;
+  color: #777;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .navsite .navbar-collapse {
+    padding-top: 0.5rem;
+  }
+}
